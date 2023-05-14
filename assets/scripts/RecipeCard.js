@@ -13,9 +13,9 @@ class RecipeCard extends HTMLElement {
     // A4. TODO - Insert all of the styles from cardTemplate.html into the <style> element you just made
     // A5. TODO - Append the <style> and <article> elements to the Shadow DOM
 
-    this.attachShadow({mode:'open'});
-    var a=document.createElement('article');
-    var s= document.createElement('style');
+    const shadow_=this.attachShadow({mode:'open'});
+    let a=document.createElement('article');
+    let s= document.createElement('style');
     s.textContent=`
      
       * {
@@ -96,8 +96,8 @@ class RecipeCard extends HTMLElement {
   
   `;
     
-    this.shadowRoot.appendChild(a);
-    this.shadowRoot.appendChild(s);
+    shadow_.appendChild(a);
+    shadow_.appendChild(s);
 
 
 
